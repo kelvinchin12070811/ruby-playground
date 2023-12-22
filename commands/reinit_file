@@ -9,5 +9,6 @@ echo "Copying assets to the playground folder..."
 cp -R /app/assets/.vscode .
 cp /app/assets/Gemfile .
 cp /app/assets/main.rb .
+cp /app/assets/rakefile .
 bundle install
 echo "Done!"
