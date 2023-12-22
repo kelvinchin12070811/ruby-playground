@@ -6,7 +6,6 @@ echo "Removing all files in the playground folder..."
 rm -rf ./{*,.*}
 echo "Initializing bundler project..."
 bundle init
-bundle config set --global path /home/playground/.bundle/gems
 echo "Copying assets to the playground folder..."
 cp -R /app/assets/.vscode .
 echo "Done!"

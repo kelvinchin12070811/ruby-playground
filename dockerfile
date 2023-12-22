@@ -18,6 +18,6 @@ RUN chmod 777 rakefile && \
     chmod -R 777 commands
 
 WORKDIR /home/playground
-ENV BUNDLE_PATH="/home/playground"
+ENV BUNDLE_PATH="/home/playground/.vendor"
 
 CMD ["rake", "-f", "/app/rakefile", "start_code_space"]

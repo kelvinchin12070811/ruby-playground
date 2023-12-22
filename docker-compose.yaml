@@ -6,7 +6,9 @@ services:
       - vscode:/root/.vscode
       - vscode-server:/root/.vscode-server
       - playground-data:/home/playground
-    hostname: ruby-playground
+    environment:
+      - FEATURE_RESET=1
+    # hostname: ruby-playground
 
 volumes:
   vscode:
