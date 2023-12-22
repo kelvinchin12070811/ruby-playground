@@ -1,0 +1,29 @@
+# frozen_string_literal: true
+
+desc 'build image'
+task :build do
+  exec 'docker build -t kelvinchin1207/ruby-playground:latest .'
+end
+
+desc 'Docker up'
+task :up do
+  exec 'docker-compose up -d'
+end
+
+desc 'Docker down'
+task :down do
+  exec 'docker-compose down'
+end
+
+desc 'Start VS code code space'
+task :start_code_space do
+  Dir.mkdir('/home/playground') unless File.exist?('/home/playground')
+
+  unless File.exist?('/home/playground/.bundle')
+    puts 'Initializing playground...'
+    system '/app/commands/reinit_file'
+  end
+
+  puts 'Starting VS code code space...'
+  exec 'code tunnel --accept-server-license-terms'
+end

@@ -1,0 +1,14 @@
+services:
+  ruby-playground:
+    image: 'kelvinchin1207/ruby-playground:latest'
+    restart: 'unless-stopped'
+    volumes:
+      - vscode:/root/.vscode
+      - vscode-server:/root/.vscode-server
+      - playground-data:/home/playground
+    hostname: ruby-playground
+
+volumes:
+  vscode:
+  vscode-server:
+  playground-data:
