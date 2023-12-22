@@ -1,6 +1,9 @@
 {
   "recommendations": [
-    "Shopify.ruby-extensions-pack",
+    "castwide.solargraph",
+    "Shopify.ruby-lsp",
+    "kaiwood.endwise",
+    "misogi.ruby-rubocop",
     "usernamehw.errorlens",
     "aaron-bond.better-comments",
     "wenfangdu.jump",

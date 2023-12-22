@@ -8,7 +8,7 @@ services:
       - playground-data:/home/playground
     environment:
       - FEATURE_RESET=1
-    # hostname: ruby-playground
+    hostname: ruby-playground
 
 volumes:
   vscode:

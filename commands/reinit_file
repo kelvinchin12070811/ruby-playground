@@ -5,7 +5,9 @@ cd /home/playground
 echo "Removing all files in the playground folder..."
 rm -rf ./{*,.*}
 echo "Initializing bundler project..."
-bundle init
 echo "Copying assets to the playground folder..."
 cp -R /app/assets/.vscode .
+cp /app/assets/Gemfile .
+cp /app/assets/main.rb .
+bundle install
 echo "Done!"

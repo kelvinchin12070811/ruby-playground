@@ -1,7 +1,7 @@
 FROM ruby:3.2.2-slim-bookworm
 
 RUN apt-get update && \
-    apt-get install -y git curl && \
+    apt-get install -y git curl build-essential && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sL "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64" \
