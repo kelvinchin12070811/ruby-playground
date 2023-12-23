@@ -21,5 +21,7 @@ puts "If you not in the /home/playground directory, use 'hop' command to quickly
 puts "'code-hop' to quickly open vscode in that directory. Note that all your work should be done in the"
 puts '/home/playground directory.'
 puts ''
+puts 'Tips: use bundle exec yard gems <gem name> to generate documentations for solargraph.'
+puts ''
 puts 'Compiled by         : https://github.com/kelvinchin12070811'
 puts 'Container repository: https://github.com/kelvinchin12070811/ruby-playground'
