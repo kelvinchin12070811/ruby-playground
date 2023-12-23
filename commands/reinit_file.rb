@@ -5,6 +5,7 @@ require('fileutils')
 LIBS_TO_INSTALL = %w[
   solargraph
   rubocop
+  yard
 ].freeze
 
 Dir.chdir('/home/playground')
