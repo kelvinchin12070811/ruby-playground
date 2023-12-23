@@ -38,4 +38,5 @@ LIBS_TO_INSTALL.each do |lib|
 end
 
 system('bundle install')
+system('bundle exec solargraph config .')
 puts 'Done!'
