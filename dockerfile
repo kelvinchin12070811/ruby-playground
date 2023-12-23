@@ -12,10 +12,10 @@ RUN apt-get update && \
     gem install bundler
 
 WORKDIR /app
-COPY .bashrc /root/.bashrc
 COPY . .
 RUN chmod 777 rakefile && \
-    chmod -R 777 commands
+    chmod -R 777 commands && \
+    rake -f /app/rakefile edit_bashrc
 
 WORKDIR /home/playground
 ENV BUNDLE_PATH="/home/playground/.vendor"

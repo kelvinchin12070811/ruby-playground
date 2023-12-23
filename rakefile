@@ -19,11 +19,24 @@ desc 'Start VS code code space'
 task :start_code_space do
   Dir.mkdir('/home/playground') unless File.exist?('/home/playground')
 
-  unless File.exist?('/home/playground/.bundle')
+  unless File.exist?('/home/playground/Gemfile')
     puts 'Initializing playground...'
-    system '/app/commands/reinit_file'
+    require_relative '/app/commands/reinit_file'
   end
 
   puts 'Starting VS code code space...'
   exec 'code tunnel --accept-server-license-terms'
+end
+
+desc 'Add entries to .bash.rc file'
+task :edit_bashrc do
+  puts 'Adding entries to .bash.rc file...'
+  bashrc = File.open('/root/.bashrc', 'w+')
+  bashrc.puts 'export PATH="/app/commands:${PATH}"'
+  bashrc.puts ''
+  bashrc.puts 'alias hop="cd /home/playground"'
+  bashrc.puts 'alias code-hop="code /home/playground"'
+  bashrc.puts 'alias cls="clear"'
+  bashrc.puts 'alias about="ruby /app/commands/about.rb"'
+  bashrc.puts 'alias reset="ruby /app/commands/reset.rb"'
 end
