@@ -2,5 +2,5 @@
 
 desc 'Run the playground'
 task :run do
-  exec 'ruby ./main.rb'
+  exec 'bundle exec ruby ./main.rb'
 end

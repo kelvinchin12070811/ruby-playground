@@ -11,5 +11,7 @@
     "files.trimFinalNewlines": true,
     "editor.rulers": [120],
     "editor.semanticHighlighting.enabled": true
-  }
+  },
+  "ruby.rubocop.useBundler": true,
+  "ruby.rubocop.executePath": ""
 }

@@ -39,4 +39,5 @@ task :edit_bashrc do
   bashrc.puts 'alias cls="clear"'
   bashrc.puts 'alias about="ruby /app/commands/about.rb"'
   bashrc.puts 'alias reset="ruby /app/commands/reset.rb"'
+  bashrc.close
 end
